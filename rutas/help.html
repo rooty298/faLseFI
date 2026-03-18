@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --bg: #f8fafc;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .contenedor-contacto {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            max-width: 450px;
+            width: 90%;
+            text-align: center;
+        }
+
+        .titulo {
+            color: var(--text-main);
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+        }
+
+        .textos {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+
+        .info {
+            color: var(--text-main);
+            font-size: 1.1rem;
+            text-align: left;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            gap: 12px; /* Espacio entre botones */
+        }
+
+        li {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 15px 20px;
+            border-radius: 12px;
+            color: var(--text-main);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        /* Efecto de hover: se levanta y cambia el borde */
+        li:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.15);
+        }
+
+        /* Añadimos una flechita al final de cada item */
+        li::after {
+            content: '→';
+            font-size: 1.2rem;
+            opacity: 0.5;
+            transition: transform 0.3s ease;
+        }
+
+        li:hover::after {
+            transform: translateX(5px);
+            opacity: 1;
+        }
+
+        /* Estilo especial para el primer item (ejemplo: Soporte) */
+        li:first-child {
+            background: #f5f3ff;
+            border-color: #ddd6fe;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor-contacto">
+        <h2 class="titulo">Help Center</h2>
+        <p class="textos">¿Necesitas ayuda? Nuestro equipo está disponible para apoyarte en lo que necesites.</p>
+        
+        <h3 class="info">📌 Enlaces rápidos</h3>
+        <ul>
+            <li>Preguntas Frecuentes</li>
+            <li>Estado de mi Pedido</li>
+            <li>Hablar con Soporte</li>
+            <li>Tutoriales de Uso</li>
+        </ul>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .contenedor-contacto {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        /* Estilos para las clases que definiste */
+        .titulo {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .textos {
+            color: #7f8c8d;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .numeros {
+            color: #34495e;
+            margin-top: 20px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Estilo de la lista */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background: #ecf0f1;
+            margin: 8px 0;
+            padding: 10px 15px;
+            border-radius: 8px;
+            color: #2980b9;
+            font-weight: bold;
+            transition: transform 0.2s, background 0.2s;
+            cursor: pointer;
+        }
+
+        li:hover {
+            background: #3498db;
+            color: white;
+            transform: translateX(10px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor-contacto">
+        <h2 class="titulo">Contactos</h2>
+        <p class="textos">Contacta con uno de nuestros trabajadores y consulta tu duda.</p>
+        
+        <h3 class="numeros">📞 Números</h3>
+        <ul>
+            <li>+54 11 1222-3344</li>
+            <li>+54 22 2233-3455</li>
+            <li>+54 73 7373-2892</li>
+            <li>+54 00 0999-2929</li>
+        </ul>
+    </div>
+
+</body>
+</html>

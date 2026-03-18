@@ -1,0 +1,64 @@
+body{
+    margin:0;
+    font-family: monospace;
+    background-color:#0f172a;
+    color:#e5e7eb;
+}
+
+/* HEADER */
+
+header{
+    background:#020617;
+    padding:20px;
+    text-align:center;
+    border-bottom:2px solid #22c55e;
+}
+
+.titulo{
+    margin:0;
+    font-size:32px;
+    color:#22c55e;
+}
+
+/* NAV */
+
+nav{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    padding:40px;
+}
+
+.rutas{
+    text-decoration:none;
+    color:white;
+    font-size:20px;
+    padding:12px 25px;
+    border:2px solid #22c55e;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.rutas:hover{
+    background:#22c55e;
+    color:black;
+    transform:scale(1.08);
+}
+
+/* FOOTER */
+
+footer{
+    position:fixed;
+    bottom:0;
+    width:100%;
+    text-align:center;
+    background:#020617;
+    padding:10px;
+    border-top:2px solid #22c55e;
+}
+
+.foot{
+    margin:0;
+    font-size:14px;
+    color:#9ca3af;
+}

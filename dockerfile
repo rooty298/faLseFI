@@ -3,18 +3,32 @@ FROM ubuntu:20.04
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt update && apt install -y \
-apache2 \
+openssh-server \
+nano \
 php \
-ssh \
-nano
+apache2 \
+openssh-client
 
 RUN mkdir /var/run/sshd \
-&& useradd -m fileuser \
-&& echo "fileuser:tinker" | chpasswd
-RUN rm /var/www/html/index.html
-RUN chmod u+s /usr/bin/find
+&& useradd -m lofi
 
-COPY rutas/ /var/www/html/
+RUN mkdir -p /home/lofi/.ssh \
+&& ssh-keygen -t rsa -b 2048 -f /home/lofi/.ssh/id_rsa -N "abcdefg" \
+&& cp /home/lofi/.ssh/id_rsa.pub /home/lofi/.ssh/authorized_keys \
+&& chown -R lofi:lofi /home/lofi/.ssh \
+&& chmod 700 /home/lofi/.ssh \
+&& chmod 600 /home/lofi/.ssh/id_rsa \
+&& chmod 600 /home/lofi/.ssh/authorized_keys
+
+RUN chgrp www-data /home/lofi/.ssh/id_rsa \
+&& chgrp www-data /home/lofi/.ssh/ \
+&& chmod 750 /home/lofi/.ssh/ \
+&& chmod 640 /home/lofi/.ssh/id_rsa
+
+RUN chmod u+s /bin/nano
+
+RUN rm /var/www/html/index.html
+COPY rutas/ /var/www/html
 
 EXPOSE 80 22
 
