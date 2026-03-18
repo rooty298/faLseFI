@@ -5,8 +5,8 @@ Laboratorio LFI con Docker
 ```bash
 git clone https://github.com/rooty298/faLseFI.git
 cd faLseFI
-docker build -t faLseFI .
-docker run -p 8080:80 -p 2222:22 faLseFI
+docker build -t falsefi .
+docker run -p 8080:80 -p 2222:22 falsefi
 ```
 # Probar
 ```bash
